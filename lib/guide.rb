@@ -23,22 +23,21 @@ class Guide
       result = do_action(user_response)
       break if result == :quit
     end
-    conclusion
   end
 
   def do_action(action)
-      case action
-      when 'find'
-        puts "Finding..."
-      when 'add'
-        puts "Adding..."
-      when 'list'
-        puts "Listing"
-      when 'quit'
-        return :quit
-      else
-        puts "\n I don't understand that command"
-      end
+    case action
+    when "list"
+      puts "Listing..."
+    when "add"
+      puts "Adding..."
+    when "find"
+      puts "Finding..."
+    when "quit"
+      return :quit
+    else
+      puts "\n I don't understant that command.\n"
+    end
   end
 
 
